@@ -1,0 +1,42 @@
+ALGORITHM Insertion_Sort
+VAR
+   n: INTEGER;
+   Tab: ARRAY_OF INTEGER[100];
+   i, j, key: INTEGER;
+
+BEGIN
+   // Get the length of the array
+   Write("Give me the number of elements in the list: ");
+   Read(n);
+
+   // Get the elements of the array one by one
+   Write("Give me the elements of the list:");
+   FOR i FROM 0 TO n-1 STEP 1 DO
+       Read(Tab[i]);
+   END_FOR
+
+   // Insertion Sort Algorithm
+   FOR i FROM 1 TO n-1 STEP 1 DO
+       key := Tab[i];
+       j := i - 1;
+
+       WHILE (j >= 0 AND Tab[j] > key) DO
+           Tab[j + 1] := Tab[j];
+           j := j - 1;
+       END_WHILE
+
+       Tab[j + 1] := key;
+   END_FOR
+
+   // Output the sorted elements
+   Write("The sorted elements of the list are:");
+   FOR i FROM 0 TO n-1 STEP 1 DO
+       Write(Tab[i]);
+   END_FOR
+END
+
+
+
+
+
+
