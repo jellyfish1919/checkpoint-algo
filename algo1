@@ -1,0 +1,45 @@
+ALGORITHM sentence_counter;
+VAR
+    sentence:STRING;
+    cptChar, cptW, cptV :INTEGER;
+    currentCar:CHAR
+BEGIN
+    //INPUT
+    Write("Give me the sentence with '.' at the end"); //Good morning we are at GMC.
+    Read(sentence);
+
+   //Initialisation des var
+   cptChar:=0;
+   cptW:=0;
+   cptV:=0;
+
+   currentCar:= sentence[0];
+
+    //TRT: Instruction
+    WHILE (currentCar <> '.') DO
+    //increment couter of car
+       cptChar:=cptChar+1 //cptChar++;
+       IF (currentCar = ' ') THEN       
+    //increment couter of Words
+       
+       
+       END_IF
+       IF (currentCar ='a' OR currentCar ='A'OR currentCar ='i'OR currentCar ='I'OR currentCar ='o'OR currentCar ='O'OR currentCar ='u'OR currentCar ='U'OR currentCar ='y'OR currentCar ='Y'OR currentCar ='e'OR currentCar ='E') THEN
+    //increment couter of Vowels
+        cptV++;
+       END_IF
+
+    //changement 
+    currentCar := sentence[cptChar]
+    END_WHILE
+
+    cptChar++; //comptabilise le ".";
+    cptW++; //2espace =trois mots
+
+
+//Expected OUtput
+    Write("The number of characters",cptChar)
+    Write("The number of Words",cptW)
+    Write("The number of Vowels",cptV)
+
+END
