@@ -34,7 +34,42 @@ BEGIN
        Write(Tab[i]);
    END_FOR
 END
+**********************************************************************************
+Here’s a concise **README** for the `Insertion_Sort` algorithm:
 
+---
+
+# Insertion_Sort Algorithm
+
+## Purpose
+The `Insertion_Sort` algorithm sorts a list of integers in ascending order.
+
+## Input & Output
+- **Input**: 
+  - `n`: The number of elements in the list.
+  - `Tab`: An array of `n` integers provided by the user.
+- **Output**: The sorted list of integers.
+
+## Steps
+1. **Input Array**:
+   - Prompt the user for the number of elements (`n`).
+   - Read each element of the list into the array `Tab`.
+   
+2. **Sorting**:
+   - For each element from the second to the last (`i = 1` to `n - 1`):
+     - Set `key` to the current element (`Tab[i]`).
+     - Compare `key` with elements before it, shifting elements greater than `key` to the right.
+     - Insert `key` at the correct position in the sorted part of the array.
+
+3. **Output Sorted Array**:
+   - Display the sorted list of integers.
+
+## Example
+For an input list `[5, 2, 9, 1, 5, 6]`, the output would be `[1, 2, 5, 5, 6, 9]`.
+
+---
+
+This README outlines the algorithm's purpose, inputs, outputs, and process in a concise manner.
 
 
 
