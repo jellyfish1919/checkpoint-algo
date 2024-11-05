@@ -43,3 +43,43 @@ BEGIN
     Write("The number of Vowels",cptV)
 
 END
+*************************************************************************************************
+Here's a shorter **README** for the `sentence_counter` algorithm:
+
+---
+
+# sentence_counter Algorithm
+
+## Purpose
+The `sentence_counter` algorithm counts:
+- Characters (excluding the final period)
+- Words
+- Vowels (both uppercase and lowercase)
+
+## Input & Output
+- **Input**: A sentence ending with a period (e.g., `Good morning we are at GMC.`).
+- **Output**:
+  - Number of characters
+  - Number of words
+  - Number of vowels
+
+## Steps
+1. **Prompt Input**: Ask the user for a sentence ending with `.`.
+2. **Initialize Counters**: Set `cptChar`, `cptW`, and `cptV` to 0.
+3. **Loop Through Characters**:
+   - Count each character (`cptChar++`).
+   - If the character is a space, increment word count (`cptW++`).
+   - If the character is a vowel, increment vowel count (`cptV++`).
+4. **End Loop** at the period (`.`).
+5. **Adjust Counts**: Add 1 to `cptChar` (for the period) and to `cptW` (for the last word).
+6. **Display Results**: Print `cptChar`, `cptW`, and `cptV`.
+
+## Example
+For `Good morning we are at GMC.`:
+- **Characters**: 24
+- **Words**: 6
+- **Vowels**: 9
+
+--- 
+
+This summary covers the main points concisely.
